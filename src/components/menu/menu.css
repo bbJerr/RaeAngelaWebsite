@@ -1,0 +1,126 @@
+.menu-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  /* background-image: url('/yellow-bg2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  position: relative;
+  overflow: hidden; /* Hide overflow to prevent visible content outside viewport */
+}
+
+.menu-title {
+  text-align: center;
+  max-width: 18%;
+  flex-shrink: 0;
+  margin-right: 12rem;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+  transform: translateX(-110%); /* Initially hide off-screen */
+}
+
+.menu-title.show {
+  transform: translateX(0); /* Show by translating into view */
+}
+
+.menu-title h1 {
+  font-size: var(--big-font-size);
+  font-family: var(--main-font);
+  padding: 50px 80px; 
+  background-color: #ffffff; 
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-weight: var(--weight-400);
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-image {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid var(--main-color);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-image:hover {
+  transform: scale(1.05);
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 140px;
+  left: 22%;
+  transform: translateX(-100%);
+}
+
+.arrow {
+  width: 150px; /* Adjust the size of the arrow as needed */
+  height: auto;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+  transform: translateX(-205%); /* Initially hide off-screen */
+}
+
+.arrow.show {
+  transform: translateX(0); /* Show by translating into view */
+}
+
+.click-me {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-500%) rotate(-10deg); /* Adjust rotation angle as needed */
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .menu-title {
+   transform: none;
+   margin: 0;
+   margin-bottom: 20px;
+   max-width: 100%;
+  }
+
+  .menu-title h1 {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    padding: 20px 30px;
+    
+  }
+  
+  .arrow {
+    display: none;
+  }
+
+  .click-me {
+    display: none;
+  }
+
+  .image-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,74 @@
+/* ======= FONT IMPORT ======= */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/*============ CSS VARIABLES ============*/
+:root {
+/*========== Colors ==========*/
+--main-color: #FFDDDF;
+--secondary-color: #FFFADD;
+
+--transition: all 300ms ease-in-out;
+
+
+/*========== Font and Typography ==========*/
+--main-font: "Poetsen One", "sans-serif";
+--body-font: "Inter";
+--white: white;
+
+--big-font-size: 75px;
+--h1-font-size: 50px;
+--h2-font-size: 29px;
+--h3-font-size: 24px;
+
+--fs-22: 2.2rem;
+
+
+
+/*========== Font Weight ==========*/
+--weight-400: 400;
+--weight-500: 500;
+--weight-600: 600;
+--weight-700: 700;
+--weight-800: 800;
+
+}
+
+/*============ BASE ============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
+.container{
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-22: 1.6rem;
+  }
+}
